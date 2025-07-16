@@ -81,7 +81,11 @@ prometheus:
     replicas: 1
     resources:
       requests:
-        memory: 50Mi
+        cpu: 50m
+        memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 128Mi
 
   serviceMonitor:
     # -- If enabled, ServiceMonitor resources for Prometheus Operator are created
